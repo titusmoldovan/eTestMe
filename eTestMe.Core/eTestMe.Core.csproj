@@ -62,6 +62,10 @@
     <Compile Include="Data\RealmModels\RealmUser.cs" />
     <Compile Include="Domain\Service\Data\IUserDataService.cs" />
     <Compile Include="Domain\Service\Data\UserDataService.cs" />
+    <Compile Include="Domain\ViewModel\LoginViewModel.cs" />
+    <Compile Include="Domain\ViewModel\BaseViewModel.cs" />
+    <Compile Include="Domain\Service\IDialogService.cs" />
+    <Compile Include="Domain\ViewModel\HomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -80,7 +84,7 @@
     <Folder Include="Data\RealmModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
-  <Import Project="..\packages\Fody.2.0.6\build\portable-net+sl+win+wpa+wp\Fody.targets" Condition="Exists('..\packages\Fody.2.0.6\build\portable-net+sl+win+wpa+wp\Fody.targets')" />
   <Import Project="..\packages\Realm.Database.1.6.0\build\Realm.Database.targets" Condition="Exists('..\packages\Realm.Database.1.6.0\build\Realm.Database.targets')" />
   <Import Project="..\packages\Realm.1.6.0\build\Realm.targets" Condition="Exists('..\packages\Realm.1.6.0\build\Realm.targets')" />
+  <Import Project="..\packages\Fody.2.1.2\build\portable-net+sl+win+wpa+wp\Fody.targets" Condition="Exists('..\packages\Fody.2.1.2\build\portable-net+sl+win+wpa+wp\Fody.targets')" />
 </Project>
