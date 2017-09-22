@@ -83,6 +83,12 @@
     <Folder Include="Data\RealmRepository\" />
     <Folder Include="Data\RealmModels\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eTestMe.Localization\eTestMe.Localization.csproj">
+      <Project>{879D502A-0323-48F8-A186-8DFC43A97B6B}</Project>
+      <Name>eTestMe.Localization</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Realm.Database.1.6.0\build\Realm.Database.targets" Condition="Exists('..\packages\Realm.Database.1.6.0\build\Realm.Database.targets')" />
   <Import Project="..\packages\Realm.1.6.0\build\Realm.targets" Condition="Exists('..\packages\Realm.1.6.0\build\Realm.targets')" />

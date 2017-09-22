@@ -1,4 +1,5 @@
-﻿using MvvmCross.Core.ViewModels;
+﻿using eTestMe.Core.Domain.ViewModel;
+using MvvmCross.Core.ViewModels;
 
 namespace eTestMe.Core
 {
@@ -10,7 +11,7 @@ namespace eTestMe.Core
 
 		public void Start(object hint = null)
 		{
-			
+            ShowViewModel<LoginViewModel>();
 		}
 	}
 

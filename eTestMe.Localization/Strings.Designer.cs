@@ -18,16 +18,16 @@ namespace eTestMe.Localization {
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Strings {
         
-        public static System.Resources.ResourceManager resourceMan;
+        private static System.Resources.ResourceManager resourceMan;
         
-        public static System.Globalization.CultureInfo resourceCulture;
+        private static System.Globalization.CultureInfo resourceCulture;
         
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Strings() {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static System.Resources.ResourceManager ResourceManager {
+        public static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
                     System.Resources.ResourceManager temp = new System.Resources.ResourceManager("eTestMe.Localization.Strings", typeof(Strings).GetTypeInfo().Assembly);
@@ -38,12 +38,24 @@ namespace eTestMe.Localization {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static System.Globalization.CultureInfo Culture {
+        public static System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        public static string LoginViewModel_UsernamePlaceholder {
+            get {
+                return ResourceManager.GetString("LoginViewModel.UsernamePlaceholder", resourceCulture);
+            }
+        }
+        
+        public static string LoginViewModel_PasswordPlaceholder {
+            get {
+                return ResourceManager.GetString("LoginViewModel.PasswordPlaceholder", resourceCulture);
             }
         }
     }

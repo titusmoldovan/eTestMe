@@ -1,4 +1,8 @@
-﻿using MvvmCross.Platform.IoC;
+﻿using eTestMe.Core.Utility;
+using eTestMe.Localization;
+using MvvmCross.Localization;
+using MvvmCross.Platform;
+using MvvmCross.Platform.IoC;
 
 namespace eTestMe.Core
 {
@@ -6,12 +10,19 @@ namespace eTestMe.Core
     {
         public override void Initialize()
         {
-            CreatableTypes()
-                .EndingWith("Service")
-                .AsInterfaces()
-                .RegisterAsLazySingleton();
+            InitializeIoc();
 
             RegisterAppStart(new AppStart());
+        }
+
+        void InitializeIoc()
+        {
+            CreatableTypes()
+                            .EndingWith("Service")
+                            .AsInterfaces()
+                            .RegisterAsLazySingleton();
+
+            Mvx.RegisterSingleton<IMvxTextProvider>(new ResxTextProvider(Strings.ResourceManager));
         }
     }
 }

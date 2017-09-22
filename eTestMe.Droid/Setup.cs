@@ -1,6 +1,14 @@
-﻿using Android.Content;
+﻿using System.Collections.Generic;
+using System.Reflection;
+using Android.Content;
+using Android.Support.Design.Widget;
+using eTestMe.Core.Domain.Service;
+using eTestMe.Droid.Service;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Droid.Shared.Presenter;
 using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Droid.Views;
+using MvvmCross.Platform;
 using MvvmCross.Platform.Platform;
 
 namespace eTestMe.Droid
@@ -20,5 +28,29 @@ namespace eTestMe.Droid
         {
             return new DebugTrace();
         }
+
+		protected override IMvxAndroidViewPresenter CreateViewPresenter()
+		{
+			var mvxFragmentsPresenter =
+				new MvxFragmentsPresenter(AndroidViewAssemblies);
+			Mvx.RegisterSingleton<IMvxAndroidViewPresenter>(mvxFragmentsPresenter);
+			return mvxFragmentsPresenter;
+		}
+
+		protected override IEnumerable<Assembly> AndroidViewAssemblies => new List<Assembly>(base.AndroidViewAssemblies)
+		{
+			typeof(NavigationView).Assembly,
+			typeof(FloatingActionButton).Assembly,
+			typeof(Android.Support.V7.Widget.Toolbar).Assembly,
+			typeof(Android.Support.V4.Widget.DrawerLayout).Assembly,
+			typeof(Android.Support.V4.View.ViewPager).Assembly,
+		};
+
+		protected override void InitializeIoC()
+		{
+			base.InitializeIoC();
+
+			Mvx.RegisterSingleton<IDialogService>(new DroidDialogService());
+		}
     }
 }
