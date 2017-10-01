@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/nav_items"
+           android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home" />        
+    </group>
+    <group>
+        <item
+            android:title="Existing Tests"/>
+        <item
+            android:title="Existings Questions"/>
+    </group>
+	<group>
+        <item
+            android:title="Create test"/>
+        <item
+            android:title="Create question"/>
+    </group>
+    <group android:id="@+id/nav_account"
+             android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Logout" />
+    </group>
+</menu>

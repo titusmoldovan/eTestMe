@@ -69,14 +69,14 @@ namespace eTestMe.Core.Domain.ViewModel
 
 		async void LoginUser()
 		{
-			if (ValidateFields())
+			//if (ValidateFields())
 			{
 				try
 				{
 					await _userDataService.Login(Username, Password);
 					ShowViewModel<HomeViewModel>();
 				}
-				catch (Exception)
+				catch (Exception e)
 				{
 					_dialogService.ShowMessage(TextSource.GetText("LoginFailedMessage"));
 				}

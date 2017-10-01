@@ -23,6 +23,9 @@
 		<item name="elevation">0dp</item>
 	</style>
 
+	<style name="MyTheme.Menu" parent="MyTheme.Base">
+    </style>
+
 	 <style name="MyTheme.TextInputLayout" parent="MyTheme.Base">
        <!-- <item name="colorAccent">@color/white</item>
         <item name="android:textCursorDrawable">@null</item>

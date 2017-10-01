@@ -1,4 +1,7 @@
-﻿using eTestMe.Core.Utility;
+﻿using eTestMe.Core.Data.RealmRepository;
+using eTestMe.Core.Domain.Repository;
+using eTestMe.Core.Domain.Service.Data;
+using eTestMe.Core.Utility;
 using eTestMe.Localization;
 using MvvmCross.Localization;
 using MvvmCross.Platform;
@@ -23,6 +26,7 @@ namespace eTestMe.Core
                             .RegisterAsLazySingleton();
 
             Mvx.RegisterSingleton<IMvxTextProvider>(new ResxTextProvider(Strings.ResourceManager));
+			Mvx.LazyConstructAndRegisterSingleton<IUserRepository, RealmUserRepository>();
         }
     }
 }

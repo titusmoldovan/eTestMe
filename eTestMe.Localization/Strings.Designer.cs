@@ -47,6 +47,12 @@ namespace eTestMe.Localization {
             }
         }
         
+        public static string LoginViewModel_LoginButtonText {
+            get {
+                return ResourceManager.GetString("LoginViewModel.LoginButtonText", resourceCulture);
+            }
+        }
+        
         public static string LoginViewModel_UsernamePlaceholder {
             get {
                 return ResourceManager.GetString("LoginViewModel.UsernamePlaceholder", resourceCulture);

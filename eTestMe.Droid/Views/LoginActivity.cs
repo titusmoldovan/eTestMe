@@ -11,7 +11,7 @@ namespace eTestMe.Droid.Views
 {
     [Activity(Label = "LoginActivity",
 			  LaunchMode = LaunchMode.SingleTask,
-              ScreenOrientation = ScreenOrientation.Landscape,
+              ScreenOrientation = ScreenOrientation.Portrait,
 			  WindowSoftInputMode = SoftInput.AdjustResize)]
 	public class LoginActivity : MvxAppCompatActivity<LoginViewModel>
 	{

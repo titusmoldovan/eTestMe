@@ -5,5 +5,10 @@
         public HomeViewModel()
         {
         }
+
+        public void Init()
+        {
+            ShowViewModel<MenuViewModel>();
+        }
     }
 }

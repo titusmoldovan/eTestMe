@@ -1,9 +1,7 @@
 ﻿using eTestMe.Core.Domain.Model;
-using Realms;
-
 namespace eTestMe.Core.Data.RealmModels
 {
-    public class RealmUser : RealmObject
+    public class RealmUser //: RealmObject
 	{
 		public string Username { get; set; }
 
